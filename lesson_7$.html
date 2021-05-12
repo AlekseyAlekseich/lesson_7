@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		let vasya = {name: "Вася", age: 35, averageMark: 100};
+		let petya = {name: "Петя", age: 30, averageMark: 75};
+		let masha = {name: "Маша", age: 16, averageMark: 50};
+
+		let users= [ vasya, petya, masha ];
+
+		const students = [ vasya,petya,masha ];
+
+		const allNames = students.map(function(item) {
+			return item.name
+		})
+		console.log(allNames);
+
+		let lesha = {name: "Алеша", age: 19, averageMark: 40 };
+
+		const userl = students.push(lesha);
+		console.log(students);
+
+		const oldStudents = students.filter(function(item) {
+			return item.age > 18
+		})
+		console.log(oldStudents);
+
+		const highMark = students.filter(function(item) {
+			return item.averageMark > 50
+		})
+		console.log(highMark);
+
+		let secondStudents = students;
+		let platon = {name: "Платон", age: 60, averageMark: 60 };
+		secondStudents[0] = platon;
+		console.log(secondStudents);
+
+		const petyaUser = students.find(function(item) {
+			return item.name === 'Петя'
+		})
+		console.log(petyaUser);
+	</script>
+</body>
+</html>	
